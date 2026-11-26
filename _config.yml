@@ -1,0 +1,5 @@
+# GitHub Pages (Jekyll) settings.
+# Folders starting with "_" (like _template) are never published.
+# README.md is excluded so it is not served as /README.html.
+exclude:
+  - README.md

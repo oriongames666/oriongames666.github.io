@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--
+  PLANTILLA DE POLÍTICA DE PRIVACIDAD — OrionGames666
+  ====================================================
+  Uso (ver README.md):
+    1. Copia este archivo a privacy/<app>/index.html
+    2. Sustituye TODOS los marcadores:
+         {{APP_NAME}}        nombre visible de la app (p. ej. Dicee)
+         {{APPLICATION_ID}}  applicationId de Android (p. ej. com.oriongames666.diceeapp)
+         {{FECHA}}           fecha en español   (p. ej. 25 de noviembre de 2026)
+         {{FECHA_EN}}        fecha en inglés    (p. ej. November 25, 2026)
+         {{DESCRIPCION_LOCAL}} / {{DESCRIPCION_LOCAL_EN}}  qué hace la app en local
+                             (p. ej. "Las tiradas de dados se generan localmente...")
+    3. Por defecto la plantilla dice que la app NO recoge datos.
+       Si la app usa algo de lo siguiente, DESCOMENTA el bloque [OPCIONAL: ...]
+       correspondiente en AMBOS idiomas (ES y EN) y BORRA los bloques marcados
+       [SOLO SI NO HAY DATOS] que dejen de ser verdad.
+         - Anuncios (AdMob)
+         - Analítica (Firebase / Google Analytics)
+         - Informes de errores (Crashlytics)
+         - Inicio de sesión / cuentas
+         - Cámara
+         - Ubicación
+    4. Comprueba que no queda ningún "{{" en el archivo:
+         grep -n "{{" privacy/<app>/index.html
+    5. Lo que digas aquí debe coincidir con el formulario "Seguridad de los datos"
+       (Data safety) de Play Console.
+
+  Esta carpeta (_template) empieza por "_", así que Jekyll/GitHub Pages NO la publica.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{APP_NAME}} – Política de Privacidad / Privacy Policy</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #222; max-width: 760px; margin: 0 auto; padding: 32px 20px; }
+    h1 { color: #c62828; margin-bottom: 0; }
+    h2 { margin-top: 2em; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+    .meta { color: #666; font-size: 0.9em; }
+    hr { margin: 48px 0; border: none; border-top: 2px solid #eee; }
+  </style>
+</head>
+<body>
+
+<!-- ============================== ESPAÑOL ============================== -->
+
+<h1>Política de Privacidad de {{APP_NAME}}</h1>
+<p class="meta">Última actualización: {{FECHA}}</p>
+
+<p>Esta política de privacidad describe cómo la aplicación <strong>{{APP_NAME}}</strong> (identificador <code>{{APPLICATION_ID}}</code>), desarrollada por <strong>OrionGames666</strong>, trata la información de sus usuarios.</p>
+
+<h2>Datos que recogemos</h2>
+
+<!-- [SOLO SI NO HAY DATOS] Borra este bloque si activas cualquier sección opcional. -->
+<p>{{APP_NAME}} <strong>no recoge, almacena, procesa ni comparte ningún dato personal o sensible</strong>. La aplicación no requiere registro ni inicio de sesión, y no accede a la ubicación, contactos, cámara, micrófono, archivos ni a ningún otro dato del dispositivo.</p>
+<!-- [/SOLO SI NO HAY DATOS] -->
+
+<p>{{DESCRIPCION_LOCAL}}</p>
+
+<!-- [OPCIONAL: INICIO DE SESIÓN]
+<h3>Cuenta e inicio de sesión</h3>
+<p>Para usar algunas funciones puedes crear una cuenta o iniciar sesión (por ejemplo, con Google). En ese caso tratamos tu dirección de correo electrónico, tu nombre visible y un identificador de usuario, únicamente para identificarte y guardar tu progreso. La autenticación la gestiona Firebase Authentication (Google), conforme a su <a href="https://firebase.google.com/support/privacy">política de privacidad</a>.</p>
+<p><strong>Eliminación de la cuenta:</strong> puedes solicitar la eliminación de tu cuenta y de todos los datos asociados desde la propia app o escribiendo a <a href="mailto:oriongames666@gmail.com">oriongames666@gmail.com</a>. Los eliminaremos en un plazo máximo de 30 días.</p>
+[/OPCIONAL: INICIO DE SESIÓN] -->
+
+<!-- [OPCIONAL: CÁMARA]
+<h3>Cámara</h3>
+<p>La app solicita permiso para usar la cámara únicamente para [EXPLICAR EL USO, p. ej. "tomar fotos dentro de la app"]. Las imágenes se procesan en tu dispositivo y no se envían a ningún servidor ni se comparten con terceros. Puedes revocar el permiso en cualquier momento desde los ajustes de Android.</p>
+[/OPCIONAL: CÁMARA] -->
+
+<!-- [OPCIONAL: UBICACIÓN]
+<h3>Ubicación</h3>
+<p>La app solicita acceso a tu ubicación [aproximada / precisa] únicamente para [EXPLICAR EL USO], y solo mientras la app está en uso. La ubicación no se guarda ni se comparte con terceros [AJUSTAR si se envía a algún servidor]. Puedes revocar el permiso en cualquier momento desde los ajustes de Android.</p>
+[/OPCIONAL: UBICACIÓN] -->
+
+<h2>Servicios de terceros</h2>
+
+<!-- [SOLO SI NO HAY DATOS] Borra este párrafo si activas anuncios, analítica o Crashlytics. -->
+<p>{{APP_NAME}} no integra publicidad, herramientas de analítica, sistemas de seguimiento ni SDK de terceros que recojan datos. Por tanto, no se comparte información con terceros.</p>
+<!-- [/SOLO SI NO HAY DATOS] -->
+
+<!-- [OPCIONAL: ANUNCIOS / ADMOB]
+<h3>Publicidad (Google AdMob)</h3>
+<p>{{APP_NAME}} muestra anuncios mediante Google AdMob. AdMob puede recoger y utilizar el identificador de publicidad del dispositivo, la dirección IP, información sobre el dispositivo y datos de interacción con los anuncios para mostrar anuncios, medir su rendimiento y, si lo consientes, personalizarlos. En el Espacio Económico Europeo, Reino Unido y Suiza te pediremos tu consentimiento antes de mostrar anuncios personalizados. Puedes restablecer o eliminar tu identificador de publicidad desde los ajustes de Android. Más información en <a href="https://policies.google.com/technologies/ads">cómo usa Google los datos en publicidad</a>.</p>
+[/OPCIONAL: ANUNCIOS / ADMOB] -->
+
+<!-- [OPCIONAL: ANALÍTICA / FIREBASE]
+<h3>Analítica (Google Analytics para Firebase)</h3>
+<p>Usamos Google Analytics para Firebase para entender de forma agregada cómo se usa la app (por ejemplo, pantallas visitadas, duración de las sesiones, modelo de dispositivo y versión de Android). Estos datos se asocian a un identificador de instancia de la app y no se usan para identificarte personalmente. Más información en la <a href="https://firebase.google.com/support/privacy">política de privacidad de Firebase</a>.</p>
+[/OPCIONAL: ANALÍTICA / FIREBASE] -->
+
+<!-- [OPCIONAL: CRASHLYTICS]
+<h3>Informes de errores (Firebase Crashlytics)</h3>
+<p>Si la app falla, Firebase Crashlytics envía un informe de error con información técnica (modelo de dispositivo, versión del sistema operativo, estado de la app en el momento del fallo e identificador de instalación) que usamos solo para corregir errores. Más información en la <a href="https://firebase.google.com/support/privacy">política de privacidad de Firebase</a>.</p>
+[/OPCIONAL: CRASHLYTICS] -->
+
+<p>Google Play, como plataforma de distribución, puede recoger cierta información conforme a su propia <a href="https://policies.google.com/privacy">política de privacidad</a>, sobre la cual no tenemos control.</p>
+
+<h2>Privacidad de los niños</h2>
+<!-- Si la app recoge datos o muestra anuncios, sustituye este texto por:
+     "{{APP_NAME}} no está dirigida a menores de 13 años y no recogemos conscientemente datos personales de ellos. Si crees que un menor nos ha proporcionado datos, escríbenos y los eliminaremos."
+     Si la app está dirigida a niños (Familias), revisa la política de Familias de Google Play antes de publicar. -->
+<p>{{APP_NAME}} no recoge datos de ningún usuario, incluidos los menores de 13 años.</p>
+
+<h2>Cambios en esta política</h2>
+<p>Si esta política cambia, publicaremos la versión actualizada en esta misma página e indicaremos la fecha de la última actualización.</p>
+
+<h2>Contacto</h2>
+<p>Si tienes alguna pregunta sobre esta política de privacidad, escríbenos a <a href="mailto:oriongames666@gmail.com">oriongames666@gmail.com</a>.</p>
+
+<hr>
+
+<!-- ============================== ENGLISH ============================== -->
+
+<h1 lang="en">{{APP_NAME}} Privacy Policy</h1>
+<div lang="en">
+<p class="meta">Last updated: {{FECHA_EN}}</p>
+
+<p>This privacy policy describes how the <strong>{{APP_NAME}}</strong> application (ID <code>{{APPLICATION_ID}}</code>), developed by <strong>OrionGames666</strong>, handles user information.</p>
+
+<h2>Data we collect</h2>
+
+<!-- [SOLO SI NO HAY DATOS] -->
+<p>{{APP_NAME}} <strong>does not collect, store, process or share any personal or sensitive data</strong>. The app requires no registration or login, and does not access location, contacts, camera, microphone, files or any other data on your device.</p>
+<!-- [/SOLO SI NO HAY DATOS] -->
+
+<p>{{DESCRIPCION_LOCAL_EN}}</p>
+
+<!-- [OPCIONAL: INICIO DE SESIÓN]
+<h3>Account and sign-in</h3>
+<p>Some features let you create an account or sign in (for example, with Google). In that case we process your email address, display name and a user ID, only to identify you and save your progress. Authentication is handled by Firebase Authentication (Google), under its <a href="https://firebase.google.com/support/privacy">privacy policy</a>.</p>
+<p><strong>Account deletion:</strong> you can request deletion of your account and all associated data from within the app or by emailing <a href="mailto:oriongames666@gmail.com">oriongames666@gmail.com</a>. We will delete it within 30 days.</p>
+[/OPCIONAL: INICIO DE SESIÓN] -->
+
+<!-- [OPCIONAL: CÁMARA]
+<h3>Camera</h3>
+<p>The app asks for camera permission only to [EXPLAIN THE USE, e.g. "take photos inside the app"]. Images are processed on your device and are never sent to any server or shared with third parties. You can revoke the permission at any time in Android settings.</p>
+[/OPCIONAL: CÁMARA] -->
+
+<!-- [OPCIONAL: UBICACIÓN]
+<h3>Location</h3>
+<p>The app asks for access to your [approximate / precise] location only to [EXPLAIN THE USE], and only while the app is in use. Location is not stored or shared with third parties [ADJUST if it is sent to a server]. You can revoke the permission at any time in Android settings.</p>
+[/OPCIONAL: UBICACIÓN] -->
+
+<h2>Third-party services</h2>
+
+<!-- [SOLO SI NO HAY DATOS] -->
+<p>{{APP_NAME}} does not include advertising, analytics, tracking or any third-party SDK that collects data. Therefore, no information is shared with third parties.</p>
+<!-- [/SOLO SI NO HAY DATOS] -->
+
+<!-- [OPCIONAL: ANUNCIOS / ADMOB]
+<h3>Advertising (Google AdMob)</h3>
+<p>{{APP_NAME}} shows ads through Google AdMob. AdMob may collect and use your device's advertising ID, IP address, device information and ad interaction data to serve ads, measure their performance and, with your consent, personalize them. In the European Economic Area, the UK and Switzerland we will ask for your consent before showing personalized ads. You can reset or delete your advertising ID in Android settings. Learn more about <a href="https://policies.google.com/technologies/ads">how Google uses data in advertising</a>.</p>
+[/OPCIONAL: ANUNCIOS / ADMOB] -->
+
+<!-- [OPCIONAL: ANALÍTICA / FIREBASE]
+<h3>Analytics (Google Analytics for Firebase)</h3>
+<p>We use Google Analytics for Firebase to understand, in aggregate, how the app is used (for example, screens viewed, session length, device model and Android version). This data is tied to an app instance ID and is not used to identify you personally. Learn more in the <a href="https://firebase.google.com/support/privacy">Firebase privacy policy</a>.</p>
+[/OPCIONAL: ANALÍTICA / FIREBASE] -->
+
+<!-- [OPCIONAL: CRASHLYTICS]
+<h3>Crash reports (Firebase Crashlytics)</h3>
+<p>If the app crashes, Firebase Crashlytics sends a crash report with technical information (device model, OS version, app state at the time of the crash and an installation ID) that we use only to fix bugs. Learn more in the <a href="https://firebase.google.com/support/privacy">Firebase privacy policy</a>.</p>
+[/OPCIONAL: CRASHLYTICS] -->
+
+<p>Google Play, as the distribution platform, may collect some information under its own <a href="https://policies.google.com/privacy">privacy policy</a>, which we do not control.</p>
+
+<h2>Children's privacy</h2>
+<!-- If the app collects data or shows ads, replace with:
+     "{{APP_NAME}} is not directed to children under 13 and we do not knowingly collect personal data from them. If you believe a child has provided us with data, contact us and we will delete it." -->
+<p>{{APP_NAME}} does not collect data from any user, including children under 13.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes, we will publish the updated version on this page and update the "last updated" date.</p>
+
+<h2>Contact</h2>
+<p>If you have any questions about this privacy policy, contact us at <a href="mailto:oriongames666@gmail.com">oriongames666@gmail.com</a>.</p>
+</div>
+
+</body>
+</html>
